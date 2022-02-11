@@ -1,4 +1,4 @@
-name: Build-ip6
+name: k5.4-ip6
 
 on:
   repository_dispatch:
