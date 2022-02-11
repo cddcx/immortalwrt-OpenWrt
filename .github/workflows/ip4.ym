@@ -10,8 +10,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_BRANCH: openwrt-18.06-k5.4
   CONFIG_FILE: config/ip4/.config
   DIY1: shell/diy-by-packages.sh
   DIY2: shell/diy-by-config.sh
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: 检查
       uses: actions/checkout@master
 
     - name: 初始化
@@ -77,10 +77,6 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
 
-    - name: 加载files
-      run: |
-        [ -e files ] && echo '如有files,将使用用户提供的files' && mv files openwrt/files
-    
     - name: 加载.config配置项
       run: |
         [ -e $GITHUB_WORKSPACE/$CONFIG_FILE ] && echo '有提供配置，将使用用户提供的配置安装依赖和插件' && mv $GITHUB_WORKSPACE/$CONFIG_FILE openwrt/.config
