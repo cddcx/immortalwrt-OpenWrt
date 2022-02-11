@@ -15,6 +15,7 @@ env:
   CONFIG_FILE: config/ip6/.config
   DIY1: shell/diy-by-packages.sh
   DIY2: shell/diy-by-config.sh
+  UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
 
 jobs:
