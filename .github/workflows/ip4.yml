@@ -83,6 +83,7 @@ jobs:
         [ -e $GITHUB_WORKSPACE/$CONFIG_FILE ] && echo '有提供配置，将使用用户提供的配置安装依赖和插件' && mv $GITHUB_WORKSPACE/$CONFIG_FILE openwrt/.config
 
     - name: DIY2（一般用于ip和样式等）
+      working-directory: ./openwrt
       run: |
         [ -e $GITHUB_WORKSPACE/$DIY2 ] && echo '有提供DIY2，将开始DIY' && chmod +x $GITHUB_WORKSPACE/$DIY2 && $GITHUB_WORKSPACE/$DIY2
 
