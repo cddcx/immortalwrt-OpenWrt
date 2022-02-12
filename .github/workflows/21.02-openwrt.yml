@@ -58,7 +58,9 @@ jobs:
 
     - name: 拉取openwrt源码
       run: |
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH $GITHUB_WORKSPACE/openwrt
+        df -hT $PWD
+        git clone $REPO_URL -b $REPO_BRANCH openwrt
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: DIY1(一般用于安装依赖和插件)
       working-directory: ./openwrt
