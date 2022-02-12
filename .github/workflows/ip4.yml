@@ -56,16 +56,6 @@ jobs:
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get clean
 
-    - name: 拉取openwrt源码
-      run: |
-        git clone --depth 1 $REPO_URL -b $REPO_BRANCH $GITHUB_WORKSPACE/openwrt
-        
-    - name: 查看一些属性
-      run: |
-        echo '查看GITHUB_WORKSPACE'
-        cd $GITHUB_WORKSPACE
-        ls -d */
-
     - name: DIY1(一般用于安装依赖和插件)
       working-directory: ./openwrt
       run: |
@@ -85,13 +75,6 @@ jobs:
     - name: DIY2（一般用于ip和样式等）
       run: |
         [ -e $GITHUB_WORKSPACE/$DIY2 ] && echo '有提供DIY2，将开始DIY' && chmod +x $GITHUB_WORKSPACE/$DIY2 && $GITHUB_WORKSPACE/$DIY2
-
-    - name: 生成配置
-      working-directory: ./openwrt
-      run: |
-        make defconfig
-        echo '查看最终生成的.config文件'
-        cat .config
 
     - name: 下载依赖
       working-directory: ./openwrt
@@ -113,7 +96,7 @@ jobs:
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
         cd openwrt/bin/targets/*/*
-        rm -rf packages
+        rm -rf packages && rm -rf *.buildinfo && rm -rf *.bin && rm -rf profiles.json
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
         
