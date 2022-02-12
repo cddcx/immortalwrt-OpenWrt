@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 检查
+    - name: 准备结束
       uses: actions/checkout@master
 
     - name: 初始化
