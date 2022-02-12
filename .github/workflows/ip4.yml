@@ -13,8 +13,8 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-18.06-k5.4
   CONFIG_FILE: config/ip4/.config
-  DIY1: shell/diy-by-packages.sh
-  DIY2: shell/diy-by-config.sh
+  DIY1: shell/diy-01.sh
+  DIY2: shell/diy-02.sh
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
 
