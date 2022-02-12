@@ -60,12 +60,6 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH $GITHUB_WORKSPACE/openwrt
     
-    - name: 查看一些属性
-      run: |
-        echo '查看GITHUB_WORKSPACE'
-        cd $GITHUB_WORKSPACE
-        ls -d */
-    
     - name: DIY1(一般用于安装依赖和插件)
       working-directory: ./openwrt
       run: |
