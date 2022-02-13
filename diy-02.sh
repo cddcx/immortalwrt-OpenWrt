@@ -8,3 +8,6 @@ sed -i 's/root::0:0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:9
 
 # 修改默认主题
 sed -i 's/bootstrap/argon/' feeds/luci/collections/luci/Makefile
+
+# 整理
+rm -rf feeds/luci/themes/luci-theme-argon
