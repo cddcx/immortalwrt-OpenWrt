@@ -109,7 +109,7 @@ jobs:
       id: organize
       run: |
         cd openwrt/bin/targets/*/*
-        rm -rf packages && rm -rf *.buildinfo && rm -rf *.bin && rm -rf profiles.json && rm -rf *rootfs.img
+        rm -rf packages && rm -rf *.buildinfo && rm -rf *.bin && rm -rf profiles.json && rm -rf *rootfs.img && rm -rf *.manifest
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         
     - name: 上传固件
