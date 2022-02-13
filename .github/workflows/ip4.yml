@@ -66,9 +66,9 @@ jobs:
         
     - name: DIY1(一般用于安装依赖和插件)
       run: |
-        chmod +x $DIY_P1_SH
+        chmod +x $DIY1
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P1_SH
+        $GITHUB_WORKSPACE/$DIY1
         
     - name: 安装并更新资源
       working-directory: ./openwrt
@@ -84,9 +84,9 @@ jobs:
         
     - name: DIY2（一般用于ip和样式等）
       run: |
-        chmod +x $DIY_P2_SH
+        chmod +x $DIY2
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY_P2_SH
+        $GITHUB_WORKSPACE/$DIY2
         
     - name: 下载依赖
       working-directory: ./openwrt
