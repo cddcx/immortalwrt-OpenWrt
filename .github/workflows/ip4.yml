@@ -13,8 +13,8 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-18.06-k5.4
   CONFIG_FILE: config/ip4/.config
-  DIY1: shell/diy-01.sh
-  DIY2: shell/diy-02.sh
+  DIY_P1_SH: diy-01.sh
+  DIY_P2_SH: diy-02.sh
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
 
@@ -66,9 +66,9 @@ jobs:
         
     - name: DIY1(一般用于安装依赖和插件)
       run: |
-        chmod +x $DIY1
+        chmod +x $DIY_P1_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY1
+        $GITHUB_WORKSPACE/$DIY_P1_SH
         
     - name: 安装并更新资源
       working-directory: ./openwrt
@@ -84,9 +84,9 @@ jobs:
         
     - name: DIY2（一般用于ip和样式等）
       run: |
-        chmod +x $DIY2
+        chmod +x $DIY_P2_SH
         cd openwrt
-        $GITHUB_WORKSPACE/$DIY2
+        $GITHUB_WORKSPACE/$DIY_P2_SH
         
     - name: 下载依赖
       working-directory: ./openwrt
