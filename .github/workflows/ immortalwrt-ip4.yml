@@ -1,4 +1,4 @@
-name: k5.4-ip4
+name: k5.4-immortalwrt-ip4
 
 on:
   repository_dispatch:
