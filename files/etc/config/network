@@ -23,10 +23,6 @@ config interface 'wan'
 	option username 'CD0283366379757'
 	option password '19701115'
 
-config interface 'wan6'
-	option ifname 'eth1'
-	option proto 'dhcpv6'
-
 config interface 'IPTV'
 	option proto 'static'
 	option ifname 'eth1.43'
