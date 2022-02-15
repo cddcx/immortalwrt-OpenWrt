@@ -8,6 +8,6 @@
 - 《[IPV4/IPV6选择](https://github.com/cddcx/immortalwrt-OpenWrt/blob/main/%E8%AF%B4%E6%98%8E/ip.md)》
 
 - # 鸣谢
-> [`Tianling Shen`](https://github.com/project-openwrt/openwrt.git)
+> [`Tianling Shen`](https://github.com/immortalwrt/immortalwrt)
 > [`P3TERX`](https://github.com/P3TERX/Actions-OpenWrt)
 > [`感谢各位大佬提供的各种各样的插件`](#/README.md)
