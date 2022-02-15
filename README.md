@@ -10,4 +10,4 @@
 - # 鸣谢
 > [`Tianling Shen`](https://github.com/immortalwrt/immortalwrt)
 > [`P3TERX`](https://github.com/P3TERX/Actions-OpenWrt)
-> [`感谢各位大佬提供的插件`](#/README.md)
+> [`感谢各位大佬！`](#/README.md)
