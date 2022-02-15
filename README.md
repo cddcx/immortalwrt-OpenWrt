@@ -1,9 +1,8 @@
 ## 说明
-
+#
 - [OpenWrt的分支 天灵](https://github.com/immortalwrt/immortalwrt)
 
-# 其他说明：
-#
+# 其他：
 ````
 - 支持ipv6：
 
