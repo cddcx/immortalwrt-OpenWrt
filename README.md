@@ -4,6 +4,8 @@
 
 - 《[拉取插件命令和各种命令的简单介绍](https://github.com/danshui-git/shuoming/blob/master/ming.md)》
 
+- 《[X86编译时选固件格式和设置overlay空间容量](https://github.com/danshui-git/shuoming/blob/master/overlay.md)》
+
 ## 其他：
 ````
 - 支持ipv6：
