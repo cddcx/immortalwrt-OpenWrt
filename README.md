@@ -4,7 +4,7 @@
 
 - 《[拉取插件命令和各种命令的简单介绍](https://github.com/cddcx/immortalwrt-OpenWrt/blob/main/%E8%AF%B4%E6%98%8E/ming.md)》
 
-- 《[X86编译时选固件格式和设置overlay空间容量](https://github.com/danshui-git/shuoming/blob/master/overlay.md)》
+- 《[X86编译时选固件格式和设置overlay空间容量](https://github.com/cddcx/immortalwrt-OpenWrt/blob/main/%E8%AF%B4%E6%98%8E/overlay.md)》
 
 ## 其他：
 ````
