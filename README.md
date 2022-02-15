@@ -1,5 +1,5 @@
 # 说明
-- [OpenWrt的分支 天灵](https://github.com/immortalwrt/immortalwrt)
+- 利用Actions编译[OpenWrt的分支-天灵](https://github.com/immortalwrt/immortalwrt)
 
 
 - 《[拉取插件命令和各种命令的简单介绍](https://github.com/cddcx/immortalwrt-OpenWrt/blob/main/%E8%AF%B4%E6%98%8E/ming.md)》
