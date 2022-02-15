@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - name: 准时结束
+    - name: 准备结束
       uses: actions/checkout@main
 
     - name: 初始化环境
