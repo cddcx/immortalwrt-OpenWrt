@@ -33,3 +33,10 @@ luci-app-dockerman 、 luci-app-docker 、 luci-app-turboacc
 ````
 #
 - 网络共享luci-app-samba默认是去不掉的，在：Extra packages ---> autosamba（不选），就可以不选luci-app-samba
+
+- # 鸣谢
+> [`coolsnowwolf`](https://github.com/coolsnowwolf/lede.git)
+> [`Lienol`](https://github.com/Lienol/openwrt.git)
+> [`ctcgfw`](https://github.com/project-openwrt/openwrt.git)
+> [`P3TERX`](https://github.com/P3TERX/Actions-OpenWrt)
+> [`感谢各位大佬提供的各种各样的插件`](#/README.md)
