@@ -29,5 +29,3 @@ luci-app-dockerman 、 luci-app-docker 、 luci-app-turboacc
 ````
 #
 - 网络共享luci-app-samba默认是去不掉的，在：Extra packages ---> autosamba（不选），就可以不选luci-app-samba
-#
-- 编译成功跟失败都邮件通知--右上角头像-->Settings-->Notifications的差不多最下面找到《Send notifications for failed workflows only》把前面的勾去掉就好了
