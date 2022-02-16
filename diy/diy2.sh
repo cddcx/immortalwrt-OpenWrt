@@ -11,3 +11,8 @@ sed -i 's/bootstrap/argon/' feeds/luci/collections/luci/Makefile
 
 # 整理
 rm -rf feeds/luci/themes/luci-theme-argon
+
+
+rm -rf feeds/packages/net/udpxy/files/udpxy.conf
+cd
+mv -f udpxy.conf openwrt/feeds/packages/net/udpxy/files/udpxy.conf
