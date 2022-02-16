@@ -51,13 +51,13 @@ generate_static_network() {
 				set network.IPTV.ifname='eth1.43'
                                 set network.IPTV.ipaddr='192.168.12.12'
                                 set network.IPTV.netmask='255.255.255.0'
-			EOF
+	        EOF
 		                  [ -e /proc/sys/net/ipv6 ] && {
 			                  uci -q batch <<-EOF
 				                  delete network.globals
 				                  set network.globals='globals'
 				                  set network.globals.ula_prefix='auto'
-			                     EOF
+		        EOF
 		                  }
 
 	if json_is_a dsl object; then
