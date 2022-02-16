@@ -57,7 +57,7 @@ generate_static_network() {
 				                  delete network.globals
 				                  set network.globals='globals'
 				                  set network.globals.ula_prefix='auto'
-			                  EOF
+			                    EOF
 		                  }
 
 	if json_is_a dsl object; then
