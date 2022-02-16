@@ -13,5 +13,5 @@ sed -i 's/bootstrap/argon/' feeds/luci/collections/luci/Makefile
 rm -rf feeds/luci/themes/luci-theme-argon
 
 rm -rf feeds/packages/net/udpxy/files/udpxy.conf
-svn co https://github.com/cddcx/immortalwrt-OpenWrt/trunk/udpxy feeds/packages/net/udpxy/files
+svn co https://github.com/cddcx/immortalwrt-OpenWrt/trunk/udpxy/a feeds/packages/net/udpxy/files
 rm -rf feeds/packages/net/udpxy/files/.svn
