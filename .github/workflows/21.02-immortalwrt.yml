@@ -60,7 +60,7 @@ jobs:
         
     - name: 加载files和.config
       run: |        
-        [ -e files ] && mv -f files feeds/packages/net/udpxy/files
+        [ -e files ] && mv -f files openwrt/feeds/packages/net/udpxy/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         
     - name: DIY2（一般用于ip和样式等）
