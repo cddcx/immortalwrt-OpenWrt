@@ -60,6 +60,7 @@ jobs:
         
     - name: 加载files和.config
       run: |        
+        [ -e udpxy.conf ] && mv udpxy.conf openwrt
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         
