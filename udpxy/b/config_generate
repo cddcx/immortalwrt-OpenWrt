@@ -49,8 +49,8 @@ generate_static_network() {
 				delete network.IPTV
 				set network.IPTV.proto='static'
 				set network.IPTV.ifname='eth1.43'
-                                      set network.IPTV.ipaddr='192.168.12.12'
-                                      set network.IPTV.netmask='255.255.255.0'
+                                set network.IPTV.ipaddr='192.168.12.12'
+                                set network.IPTV.netmask='255.255.255.0'
 			EOF
 		                  [ -e /proc/sys/net/ipv6 ] && {
 			                  uci -q batch <<-EOF
