@@ -1,8 +1,8 @@
 
 # 说明
--1 利用[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的Actions编译[OpenWrt的分支-天灵](https://github.com/immortalwrt/immortalwrt)
+- 利用[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的Actions编译[OpenWrt的分支-天灵](https://github.com/immortalwrt/immortalwrt)
 
--2 .github/workflows/Build.yml的env参数说明
+- .github/workflows/Build.yml的env参数说明
 
 |  属性   | 说明  |
 |  ----  | ----  |
@@ -18,7 +18,7 @@
 - 《[IPV4/IPV6选择](https://github.com/cddcx/immortalwrt-OpenWrt/blob/main/%E8%AF%B4%E6%98%8E/ip.md)》
 - 《[X86编译时选固件格式和设置overlay空间容量](https://github.com/cddcx/immortalwrt-OpenWrt/blob/main/%E8%AF%B4%E6%98%8E/overlay.md)》
 
-- # 鸣谢
+## 鸣谢
 > [`Tianling Shen`](https://github.com/immortalwrt/immortalwrt)
 > [`P3TERX`](https://github.com/P3TERX/Actions-OpenWrt)
 > [`感谢各位大佬！`](#/README.md)
