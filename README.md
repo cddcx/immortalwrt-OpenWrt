@@ -2,7 +2,7 @@
 # 说明
 - 利用[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的Actions编译[OpenWrt的分支-天灵](https://github.com/immortalwrt/immortalwrt)
 ---
-- *.github/workflows/Build.yml的env参数说明  *
+- .github/workflows/Build.yml的env参数说明
 
 |  属性   | 说明  |
 |  ----  | ----  |
