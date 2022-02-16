@@ -14,4 +14,4 @@ rm -rf feeds/luci/themes/luci-theme-argon
 
 
 #rm -rf feeds/packages/net/udpxy/files/udpxy.conf
-mv -f udpxy.conf feeds/packages/net/udpxy/files/udpxy.conf
+#mv -f udpxy.conf feeds/packages/net/udpxy/files/udpxy.conf
