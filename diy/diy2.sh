@@ -12,10 +12,12 @@ sed -i 's/bootstrap/argon/' feeds/luci/collections/luci/Makefile
 # 整理
 rm -rf feeds/luci/themes/luci-theme-argon
 
-#rm -rf feeds/packages/net/udpxy/files/udpxy.conf
-#svn co https://github.com/cddcx/immortalwrt-OpenWrt/trunk/udpxy/a feeds/packages/net/udpxy/files
-#rm -rf feeds/packages/net/udpxy/files/.svn
-
-#rm -rf package/base-files/files/bin/config_generate
-#svn co https://github.com/cddcx/immortalwrt-OpenWrt/trunk/udpxy/b package/base-files/files/bin
-#rm -rf package/base-files/files/bin/.svn
+# 修改网络
+#sed -i 's/eth0/eth0 eth2 eth3/' package/base-files/files/etc/board.d/99-default_network
+#sed -i '2i # network config' package/default-settings/files/zzz-default-settings
+#sed -i "3i uci set network.wan.proto='pppoe'" package/default-settings/files/zzz-default-settings
+#sed -i "4i uci set network.wan.username='CD0283366379757'" package/default-settings/files/zzz-default-settings
+#sed -i "5i uci set network.wan.password='19701115'" package/default-settings/files/zzz-default-settings
+#sed -i "6i uci set network.wan.ifname='eth1'" package/default-settings/files/zzz-default-settings
+#sed -i "7i uci set network.wan6.ifname='eth1'" package/default-settings/files/zzz-default-settings
+#sed -i '8i uci commit network' package/default-settings/files/zzz-default-settings
