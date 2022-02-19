@@ -2,7 +2,7 @@
 # 说明
 1 利用[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的Actions编译[OpenWrt的分支-天灵](https://github.com/immortalwrt/immortalwrt)
 
-2 各分支及默认内核
+2 immortalwrt各分支及默认内核
 
 |  分支   |  内核  |
 |  ----  | ----  |
