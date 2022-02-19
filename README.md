@@ -2,7 +2,16 @@
 # 说明
 1 利用[P3TERX](https://github.com/P3TERX/Actions-OpenWrt)的Actions编译[OpenWrt的分支-天灵](https://github.com/immortalwrt/immortalwrt)
 
-2 .github/workflows/Build.yml的env参数说明
+2 各分支及默认内核
+
+|  分支   |  内核  |
+|  ----  | ----  |
+| openwrt-18.06  | 4.14  4.19  4.9   默认4.19 |
+| master  | 5.10   默认5.10 |
+| openwrt-18.06-k5.4  | 5.4   默认5.4 |
+| openwrt-21.02 | 4.14  4.19  5.4   默认5.4 |
+
+3 .github/workflows/Build.yml的env参数说明
 
 |  环境变量   | 功能  |
 |  ----  | ----  |
