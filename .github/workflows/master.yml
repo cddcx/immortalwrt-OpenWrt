@@ -1,4 +1,4 @@
-name: immortalwrt-name: k5.4-immortalwrt-ip4
+name: immortalwrt-master
 
 on:
   repository_dispatch:
@@ -11,7 +11,7 @@ on:
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
-  REPO_BRANCH: openwrt-18.06-k5.4
+  REPO_BRANCH: master
   CONFIG_FILE: config/ip4/.config
   DIY_P1_SH: diy/diy1.sh
   DIY_P2_SH: diy/diy2.sh
