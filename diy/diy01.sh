@@ -25,7 +25,7 @@ sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/luci-app-store/luasrc/c
 # luci-theme-argon改版主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
-sed -i 's/luci-theme-argon-18.06/luci-theme-argon/g' package/luci-theme-argon/Makefile
+#sed -i 's/luci-theme-argon-18.06/luci-theme-argon/g' package/luci-theme-argon/Makefile
 
 # ikoolproxy去广告插件
 #git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
