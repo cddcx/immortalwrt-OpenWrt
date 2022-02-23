@@ -22,6 +22,9 @@ svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci
 rm -rf package/luci-app-store/.svn
 sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/luci-app-store/luasrc/controller/store.lua
 
+# luci-theme-opentopd主题
+git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
+
 # luci-theme-argon改版主题
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
