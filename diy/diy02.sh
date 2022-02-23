@@ -7,10 +7,10 @@
 sed -i 's/root::0:0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 修改默认主题
-#sed -i 's/bootstrap/argon/' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/opentopd/' feeds/luci/collections/luci/Makefile
 
 # 整理
-rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/themes/luci-theme-argon
 
 # 修改网络
 #sed -i 's/eth0/eth0 eth2 eth3/' package/base-files/files/etc/board.d/99-default_network
