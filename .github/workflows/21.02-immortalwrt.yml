@@ -1,13 +1,10 @@
 name: immortalwrt-21.02
 
 on:
-  repository_dispatch:
   workflow_dispatch:
     inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
+      manual:
+        description: '手动触发一次编译'
 
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
