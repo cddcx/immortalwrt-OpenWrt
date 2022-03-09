@@ -32,5 +32,5 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
 # ikoolproxy去广告插件
-git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
-rm -rf package/luci-app-ikoolproxy/README*
+#git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+#rm -rf package/luci-app-ikoolproxy/README*
