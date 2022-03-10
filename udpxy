@@ -1,0 +1,10 @@
+
+config udpxy
+	option respawn '1'
+	option verbose '0'
+	option status '1'
+	option disabled '0'
+	option bind '192.168.1.1'
+	option port '4100'
+	option source 'eth1.43'
+
