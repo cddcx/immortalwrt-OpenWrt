@@ -14,11 +14,11 @@ rm -rf feeds/luci/applications/luci-app-passwall
 #rm -rf feeds/luci/themes/luci-theme-argon*
 
 # 修改网络
-#sed -i 's/eth0/eth0 eth2 eth3/' package/base-files/files/etc/board.d/99-default_network
-#sed -i '2i # network config' package/emortal/default-settings/files/99-default-settings
-#sed -i "3i uci set network.wan.proto='pppoe'" package/emortal/default-settings/files/99-default-settings
-#sed -i "4i uci set network.wan.username='CD0283366379757'" package/emortal/default-settings/files/99-default-settings
-#sed -i "5i uci set network.wan.password='19701115'" package/emortal/default-settings/files/99-default-settings
-#sed -i "6i uci set network.wan.ifname='eth1'" package/emortal/default-settings/files/99-default-settings
-#sed -i "7i uci set network.wan6.ifname='eth1'" package/emortal/default-settings/files/99-default-settings
-#sed -i '8i uci commit network' package/emortal/default-settings/files/99-default-settings
+sed -i 's/eth0/eth0 eth2 eth3/' package/base-files/files/etc/board.d/99-default_network
+sed -i '2i # network config' package/emortal/default-settings/files/99-default-settings
+sed -i "3i uci set network.wan.proto='pppoe'" package/emortal/default-settings/files/99-default-settings
+sed -i "4i uci set network.wan.username='CD0283366379757'" package/emortal/default-settings/files/99-default-settings
+sed -i "5i uci set network.wan.password='19701115'" package/emortal/default-settings/files/99-default-settings
+sed -i "6i uci set network.wan.ifname='eth1'" package/emortal/default-settings/files/99-default-settings
+sed -i "7i uci set network.wan6.ifname='eth1'" package/emortal/default-settings/files/99-default-settings
+sed -i '8i uci commit network' package/emortal/default-settings/files/99-default-settings
