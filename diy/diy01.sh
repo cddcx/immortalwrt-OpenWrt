@@ -25,6 +25,9 @@ sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/luci-app-store/luasrc/c
 # luci-theme-opentopd主题
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
+#新luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall
+
 # luci-theme-argon改版主题
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
