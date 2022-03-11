@@ -31,6 +31,9 @@ sed -i 's/("iStore"), 31/("应用"), 61/g' package/luci-app-store/luasrc/control
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
+#新luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall
+
 # ikoolproxy去广告插件
 #git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
 #rm -rf package/luci-app-ikoolproxy/README*
