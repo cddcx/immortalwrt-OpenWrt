@@ -17,6 +17,9 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
+# 修改内核
+sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/x86/Makefile
+
 # 软件中心istore
 svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
 rm -rf package/luci-app-store/.svn
