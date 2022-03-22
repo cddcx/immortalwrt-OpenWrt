@@ -1,0 +1,30 @@
+
+config interface 'loopback'
+	option ifname 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config interface 'lan'
+	option type 'bridge'
+	option ifname 'eth0 eth2 eth3'
+	option proto 'static'
+	option ipaddr '192.168.1.1'
+	option netmask '255.255.255.0'
+	option delegate '0'
+
+config interface 'wan'
+	option ifname 'eth1'
+	option proto 'pppoe'
+	option username 'CD0283366379757'
+	option password '19701115'
+	option delegate '0'
+	option keepalive '0'
+
+config interface 'iptv'
+	option proto 'static'
+	option ifname 'eth1.43'
+	option ipaddr '192.168.12.168'
+	option netmask '255.255.255.0'
+	option delegate '0'
+
