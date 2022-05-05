@@ -35,7 +35,7 @@ git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-ope
 rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
 #新luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall2 package/passwall
+git clone https://github.com/xiaorouji/openwrt-passwall package/passwall
 
 # ikoolproxy去广告插件
 #git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
