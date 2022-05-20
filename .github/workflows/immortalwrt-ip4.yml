@@ -101,5 +101,5 @@ jobs:
     - name: 上传固件到github
       uses: actions/upload-artifact@main
       with:
-        name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+        name: immortalwrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
