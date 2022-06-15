@@ -10,7 +10,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
   CONFIG_FILE: config/ip4/.config
-  DIY_P1_SH: diy/diy01.sh
+  DIY_P1_SH: diy/diy-master.sh
   DIY_P2_SH: diy/diy02.sh
   UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
