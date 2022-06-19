@@ -23,6 +23,7 @@ config interface 'wan'
 	option username 'cd0283366379757'
 	option password '19701115'
 	option keepalive '0'
+	option delegate '0'
 
 config interface 'IPTV'
 	option proto 'static'
