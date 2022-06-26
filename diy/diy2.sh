@@ -12,7 +12,6 @@ sed -i 's/bootstrap/opentopd/' feeds/luci/collections/luci/Makefile
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/themes/luci-theme-argon*
-rm -rf feeds/luci/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-serverchan
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/packages/net/smartdns
