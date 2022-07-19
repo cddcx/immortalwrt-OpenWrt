@@ -21,10 +21,12 @@
 #sed -i 's/PATCHVER:=5.4/PATCHVER:=5.10/g' target/linux/x86/Makefile
 
 # 软件中心istore
-svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
+#svn co https://github.com/linkease/istore/trunk/luci/luci-app-store package/luci-app-store
+svn co https://github.com/linkease/istore/trunk/luci package/istore
 svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
-rm -rf package/luci-app-store/.svn
-sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/luci-app-store/luasrc/controller/store.lua
+rm -rf package/istore/.svn
+sed -i 's/luci-lib-ipkg/luci-base/g' package/istore/luci-app-store/Makefile
+sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
 
 # luci-theme-argon改版主题
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
