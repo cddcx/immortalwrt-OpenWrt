@@ -1,4 +1,4 @@
-name: immortalwrt-master-k5.10
+name: immortalwrt-master
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: master
-  CONFIG_FILE: config/ip4/.config
+  CONFIG_FILE: config/ip6/.config
   DIY_P1_SH: diy/diy-master.sh
   DIY_P2_SH: diy/diy02.sh
   UPLOAD_FIRMWARE: true
