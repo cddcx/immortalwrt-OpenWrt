@@ -9,6 +9,14 @@ sed -i 's/root::0:0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:9
 # 修改默认主题
 sed -i 's/bootstrap/opentopd/' feeds/luci/collections/luci/Makefile
 
+# 修改源码
+rm -rf include/target.mk
+rm -rf target/linux/x86/Makefile
+rm -rf package/network/config/firewall/makefile
+svn export https://github.com/coolsnowwolf/lede/trunk/include/target.mk include/
+svn export https://github.com/coolsnowwolf/lede/trunk/target/linux/x86/Makefile target/linux/x86/
+svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
+
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/luci/themes/luci-theme-argon*
