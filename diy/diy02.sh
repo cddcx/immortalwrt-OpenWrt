@@ -16,6 +16,7 @@ rm -rf package/network/config/firewall/makefile
 svn export https://github.com/coolsnowwolf/lede/trunk/include/target.mk include/
 svn export https://github.com/coolsnowwolf/lede/trunk/target/linux/x86/Makefile target/linux/x86/
 svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
 
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
