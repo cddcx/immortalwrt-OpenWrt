@@ -7,7 +7,9 @@
 sed -i 's/root::0:0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 修改默认主题
-#sed -i 's/bootstrap/opentopd/' feeds/luci/collections/luci/Makefile
+sed -i 's/bootstrap/opentopd/' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 
 # 修改源码
 rm -rf include/target.mk
