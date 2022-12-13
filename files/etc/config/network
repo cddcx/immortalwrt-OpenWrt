@@ -7,6 +7,7 @@ config interface 'loopback'
 
 config globals 'globals'
 	option ula_prefix 'fdb3:f4ad:8a20::/48'
+	option packet_steering '1'
 
 config device
 	option name 'br-lan'
@@ -32,3 +33,10 @@ config interface 'wan'
 config interface 'wan6'
 	option device 'eth1'
 	option proto 'dhcpv6'
+	
+config interface 'IPTV'
+	option proto 'static'
+	option device 'eth1.43'
+	option ipaddr '192.168.12.12'
+	option netmask '255.255.255.0'
+        
