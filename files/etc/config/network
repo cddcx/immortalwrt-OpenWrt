@@ -33,10 +33,10 @@ config interface 'wan'
 config interface 'wan6'
 	option device 'eth1'
 	option proto 'dhcpv6'
-	
+
 config interface 'IPTV'
 	option proto 'static'
 	option device 'eth1.43'
 	option ipaddr '192.168.12.12'
 	option netmask '255.255.255.0'
-        
+
