@@ -5,8 +5,10 @@
 sed -i 's/root::0:0:99999:7:::/root:$1$xUooaZpA$6zs50xt4ac9sJXiYpycT3\/:19338:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 添加源
-echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
-echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+#echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+#echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+git clone https://github.com/linkease/nas-packages package/nas
+git clone https://github.com/linkease/nas-packages-luci package/nas_luci
 
 ## 软件中心istore
 git clone https://github.com/linkease/istore.git package/istore
