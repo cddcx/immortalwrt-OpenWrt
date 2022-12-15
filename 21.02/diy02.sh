@@ -28,6 +28,7 @@ rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/luci/collections/luci-lib-docker
 rm -rf feeds/packages/utils/docker*
 rm -rf package/feeds/luci/luci-app-docker*
+rm -rf package/feeds/luci/luci-app-smartdns
 rm -rf package/feeds/luci/luci-lib-docker
 rm -rf package/feeds/packages/docker*
 rm -rf feeds/packages/net/adguardhome
