@@ -20,6 +20,8 @@ sed -i 's/("NetworkPort")/("网口配置")/g' package/linkease/nas-packages-luci
 #cp -af feeds/xiangfeidexiaohuo/linkease/nas-packages-luci/luci-app-quickstart/po/zh-cn package/nas-packages-luci/luci-app-quickstart/po/zh_Hans
 
 ##
+rm -rf feeds/luci/applications/luci-app-disk*
+rm -rf package/feeds/luci/luci-app-disk*
 rm -rf feeds/luci/applications/luci-app-adguardhome
 rm -rf feeds/luci/applications/luci-app-docker*
 rm -rf feeds/luci/applications/luci-app-smartdns
