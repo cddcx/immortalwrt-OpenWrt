@@ -21,14 +21,9 @@ sed -i 's/("NetworkPort")/("网口配置")/g' package/linkease/nas-packages-luci
 
 ##
 rm -rf feeds/luci/applications/luci-app-adguardhome
-rm -rf feeds/luci/applications/luci-app-disk*
 rm -rf feeds/luci/applications/luci-app-docker*
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/packages/utils/docker*
-rm -rf feeds/packages/utils/containerd
-rm -rf feeds/packages/utils/coremark
-rm -rf feeds/packages/utils/runc
-rm -rf feeds/packages/utils/libnetwork
 rm -rf package/feeds/luci/luci-app-docker*
 rm -rf package/feeds/luci/luci-lib-docker
 rm -rf package/feeds/packages/docker*
