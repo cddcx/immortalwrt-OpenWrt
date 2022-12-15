@@ -25,6 +25,7 @@ rm -rf package/feeds/luci/luci-app-disk*
 rm -rf feeds/luci/applications/luci-app-adguardhome
 rm -rf feeds/luci/applications/luci-app-docker*
 rm -rf feeds/luci/applications/luci-app-smartdns
+rm -rf feeds/luci/collections/luci-lib-docker
 rm -rf feeds/packages/utils/docker*
 rm -rf package/feeds/luci/luci-app-docker*
 rm -rf package/feeds/luci/luci-lib-docker
