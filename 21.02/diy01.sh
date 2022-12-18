@@ -8,5 +8,5 @@ svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease pack
 svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 # luci-app-openclash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
-rm -rf package/luci-app-openclash/.svn
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+#rm -rf package/luci-app-openclash/.svn
