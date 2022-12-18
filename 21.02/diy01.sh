@@ -7,6 +7,13 @@ sed -i 's/root::0:0:99999:7:::/root:$1$xUooaZpA$6zs50xt4ac9sJXiYpycT3\/:19338:0:
 svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
 svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/jerrykuku/luci-theme-argon package/luci-theme-argon
 
+## 修改include/target.mk
+sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-istorex/g' include/target.mk
+sed -i 's/luci-app-turboacc/luci-app-udpxy luci-app-upnp/g' include/target.mk
+
+## 修改target/linux/x86/Makefile
+sed -i 's/automount/ipv6helper/g' target/linux/x86/Makefile
+
 # luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 #rm -rf package/luci-app-openclash/.svn
