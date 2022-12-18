@@ -39,7 +39,6 @@ rm -rf feeds/packages/net/smartdns
 #rm -rf feeds/luci/applications/luci-app-adguardhome
 #rm -rf feeds/packages/net/adguardhome
 
-
 ##更改主机名
 #sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 
