@@ -14,7 +14,8 @@ sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-istorex/g' include/t
 sed -i 's/luci-app-turboacc/luci-app-udpxy luci-app-upnp/g' include/target.mk
 
 ## 修改target/linux/x86/Makefile
-sed -i 's/automount/ipv6helper/g' target/linux/x86/Makefile
+sed -i 's/kmod-ipt-raw/kmod-ipt-raw kmod-igc/g' target/linux/x86/Makefile
+sed -i 's/iptables/iptables ip6tables odhcp6c odhcpd-ipv6only/g' target/linux/x86/Makefile
 
 ## luci-app-openclash
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
