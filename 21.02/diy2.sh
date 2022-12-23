@@ -20,18 +20,13 @@ sed -i 's/("NetworkPort")/("网口配置")/g' package/nas_luci/luci-app-quicksta
 #cp -af feeds/xiangfeidexiaohuo/linkease/nas-packages-luci/luci-app-quickstart/po/zh-cn package/nas-packages-luci/luci-app-quickstart/po/zh_Hans
 
 ## 删除软件
-#rm -rf feeds/luci/applications/luci-app-disk*
-#rm -rf package/feeds/luci/luci-app-disk*
-#rm -rf feeds/luci/applications/luci-app-attendedsysupgrade
-rm -rf feeds/luci/applications/luci-app-docker*
-#rm -rf package/feeds/luci/luci-app-attendedsysupgrade
-rm -rf package/feeds/luci/luci-app-docker*
-rm -rf package/feeds/luci/luci-lib-docker
-#rm -rf feeds/packages/utils/attendedsysupgrade*
-rm -rf feeds/packages/utils/docker*
-rm -rf package/feeds/packages/docker*
+rm -rf feeds/luci/applications/luci-app-adguardhome
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/luci/applications/luci-app-mosdns
+rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-openclash
 #rm -rf feeds/packages/utils/containerd
 #rm -rf feeds/packages/utils/coremark
 #rm -rf feeds/packages/utils/runc
