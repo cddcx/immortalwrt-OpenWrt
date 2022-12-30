@@ -26,7 +26,6 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/packages/net/smartdns
-rm -rf feeds/luci/applications/luci-app-openclash
 #rm -rf feeds/packages/utils/containerd
 #rm -rf feeds/packages/utils/coremark
 #rm -rf feeds/packages/utils/runc
