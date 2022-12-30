@@ -18,3 +18,5 @@ sed -i 's/iptables/iptables ip6tables odhcp6c odhcpd-ipv6only/g' target/linux/x8
 sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-istorex/g' include/target.mk
 sed -i 's/luci-app-turboacc/luci-app-udpxy luci-app-upnp/g' include/target.mk
 
+## 修改openwrt/target/linux/x86的Makefile文件
+sed -i 's/autocore-x86 automount/autocore-x86/g' target/linux/x86/Makefile
