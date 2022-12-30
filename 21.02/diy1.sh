@@ -19,4 +19,4 @@ sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-istorex/g' include/t
 sed -i 's/luci-app-turboacc/luci-app-udpxy luci-app-upnp/g' include/target.mk
 
 ## 修改openwrt/target/linux/x86的Makefile文件
-sed -i 's/autocore-x86 automount/autocore-x86/g' target/linux/x86/Makefile
+sed -i 's/autocore-x86 automount/htop autocore-x86 ipv6helper/g' target/linux/x86/Makefile
