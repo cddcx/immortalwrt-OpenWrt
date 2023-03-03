@@ -12,6 +12,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 
+sed -i '/luci-app-attendedsysupgrade/d' feeds/luci/collections/luci/Makefile
 # 修改源码
 #rm -rf include/target.mk
 #rm -rf target/linux/x86/Makefile
