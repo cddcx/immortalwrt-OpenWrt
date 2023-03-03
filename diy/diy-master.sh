@@ -36,7 +36,7 @@ sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/linkease/iStore/luci-ap
 #rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
 # luci-theme-argon改版主题
-#git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #rm -rf package/luci-theme-argon/README*
 #rm -rf package/luci-theme-argon/Screenshots/
