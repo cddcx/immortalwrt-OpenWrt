@@ -13,6 +13,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-n
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 
 sed -i '/luci-app-attendedsysupgrade/d' feeds/luci/collections/luci/Makefile
+
 # 修改源码
 #rm -rf include/target.mk
 #rm -rf target/linux/x86/Makefile
@@ -22,7 +23,7 @@ sed -i '/luci-app-attendedsysupgrade/d' feeds/luci/collections/luci/Makefile
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
 sed -i '/luci-app-cpufreq/d' include/target.mk
-sed -i 's/automount/luci-app-istorex luci-app-openclash luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
+sed -i 's/automount/luci-app-ssr-plus luci-app-openclash luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
 
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
