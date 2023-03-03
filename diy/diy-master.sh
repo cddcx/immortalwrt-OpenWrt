@@ -23,7 +23,7 @@ sed -i 's/PATCHVER:=5.10/PATCHVER:=5.15/g' target/linux/x86/Makefile
 #酷友社开发的Openwrt插件：DDNSTO远程穿透、易有云存储端、iStore、QuickStart便捷首页
 svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
 rm -rf package/linkease/preview
-sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/linkease/istore/luci-app-store/luasrc/controller/store.lua
+sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/linkease/iStore/luci-app-store/luasrc/controller/store.lua
 
 # 软件中心istore
 #svn co https://github.com/linkease/istore/trunk/luci package/istore
