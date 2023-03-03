@@ -7,24 +7,24 @@
 sed -i 's/root::0:0:99999:7:::/root:$1$SOP5eWTA$fJV8ty3QohO0chErhlxCm1:18775:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 # 修改默认主题
-sed -i 's/bootstrap/opentopd/' feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-opentopd/g' feeds/luci/collections/luci/Makefile
-sed -i 's/luci-theme-bootstrap/luci-theme-opentopd/g' feeds/luci/collections/luci-nginx/Makefile
+sed -i '/set luci.main.mediaurlbase*/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 
 # 修改源码
-rm -rf include/target.mk
-rm -rf target/linux/x86/Makefile
-rm -rf package/network/config/firewall/makefile
-svn export https://github.com/coolsnowwolf/lede/trunk/include/target.mk include/
-svn export https://github.com/coolsnowwolf/lede/trunk/target/linux/x86/Makefile target/linux/x86/
-svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
-svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
-sed -i 's/luci-app-ddns/luci-app-istorex/g' include/target.mk
-sed -i 's/luci-app-autoreboot/luci-app-openclash/g' include/target.mk
+#rm -rf include/target.mk
+#rm -rf target/linux/x86/Makefile
+#rm -rf package/network/config/firewall/makefile
+#svn export https://github.com/coolsnowwolf/lede/trunk/include/target.mk include/
+#svn export https://github.com/coolsnowwolf/lede/trunk/target/linux/x86/Makefile target/linux/x86/
+#svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
+#svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
+sed -i 's/luci-app-cpufreq/luci-app-istorex luci-app-openclash luci-app-udpxy luci-app-upnp/g' include/target.mk
 
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf feeds/luci/themes/luci-theme-argon*
+#rm -rf feeds/luci/themes/luci-theme-argon*
 
 # 修改网络
 #sed -i 's/eth0/eth0 eth2 eth3/' package/base-files/files/etc/board.d/99-default_network
