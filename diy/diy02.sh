@@ -23,6 +23,7 @@ sed -i '/luci-app-attendedsysupgrade/d' feeds/luci/collections/luci/Makefile
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
 sed -i '/luci-app-cpufreq/d' include/target.mk
+sed -i '/default-settings-chn /d' include/target.mk
 sed -i 's/automount/default-settings luci luci-app-ssr-plus luci-app-openclash luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
 
 # 整理
