@@ -23,8 +23,8 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
 sed -i '/luci-app-cpufreq/d' include/target.mk
-sed -i 's/default-settings-chn/default-settings luci/g' include/target.mk
-sed -i 's/automount/default-settings luci luci-app-ssr-plus luci-app-openclash luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
+sed -i 's/default-settings-chn/default-settings-chn luci/g' include/target.mk
+sed -i 's/automount/autocore-x86 default-settings-chn luci luci-app-ssr-plus luci-app-openclash luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
 
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
