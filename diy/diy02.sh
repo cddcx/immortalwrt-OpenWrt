@@ -22,8 +22,20 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 #svn export https://github.com/coolsnowwolf/lede/trunk/target/linux/x86/Makefile target/linux/x86/
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/network/config/firewall/makefile package/network/config/firewall/
 #svn export https://github.com/coolsnowwolf/lede/trunk/package/lean package/lean
-#sed -i '/luci-app-cpufreq/d' include/target.mk
-sed -i 's/default-settings-chn/autocore-x86 default-settings luci/g' include/target.mk
+sed -i '/For easy usage/d' include/target.mk
+sed -i '/DEFAULT_PACKAGES.tweak/d' include/target.mk
+sed -i '/autocore/d' include/target.mk
+sed -i '/block-mount/d' include/target.mk
+sed -i '/default-settings-chn/d' include/target.mk
+sed -i '/kmod-nf-nathelper/d' include/target.mk
+sed -i '/kmod-nf-nathelper-extra/d' include/target.mk
+sed -i '/luci-light/d' include/target.mk
+sed -i '/luci-app-cpufreq/d' include/target.mk
+sed -i '/luci-app-opkg/d' include/target.mk
+sed -i '/luci-compat/d' include/target.mk
+sed -i '/uci-lib-base/d' include/target.mk
+sed -i '/luci-lib-fs/d' include/target.mk
+sed -i '/luci-lib-ipkg/d' include/target.mk
 sed -i 's/automount/autocore-x86 default-settings luci luci-app-ssr-plus luci-app-openclash luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
 
 # 整理
