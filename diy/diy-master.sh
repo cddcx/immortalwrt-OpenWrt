@@ -37,7 +37,8 @@
 
 sed -i 's/kmod-ipt-offload/kmod-ipt-offload block-mount coremark kmod-nf-nathelper kmod-nft-tproxy kmod-nf-nathelper-extra kmod-ipt-raw/g' include/target.mk
 sed -i 's/ip6tables/ip6tables ipv6helper kmod-inet-diag default-settings luci luci-newapi/g' include/target.mk
-
+sed -i "s/automount/autocore-x86 usbutils pciutils lm-sensors-detect fdisk lsblk \
+luci-app-firewall luci-app-opkg luci-app-ssr-plus luci-app-udpxy luci-app-upnp/" target/linux/x86/Makefile
 # luci-theme-argon改版主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
