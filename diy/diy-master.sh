@@ -35,6 +35,9 @@
 #git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 #rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
+sed -i 's/kmod-ipt-offload/kmod-ipt-offload block-mount coremark kmod-nf-nathelper kmod-nft-tproxy kmod-nf-nathelper-extra kmod-ipt-raw/g' include/target.mk
+sed -i 's/ip6tables/ip6tables ipv6helper kmod-inet-diag default-settings luci luci-newapi/g' include/target.mk
+
 # luci-theme-argon改版主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
