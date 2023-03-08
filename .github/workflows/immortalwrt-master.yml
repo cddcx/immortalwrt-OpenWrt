@@ -77,6 +77,7 @@ jobs:
     - name: 开始编译固件
       working-directory: ./openwrt
       run: |
+        make package/feeds/luci/luci-base/compile V=s
         echo -e "$(nproc) thread build."
         make -j$(nproc) || make -j1 || make -j1 V=s
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
