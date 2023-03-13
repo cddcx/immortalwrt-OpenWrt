@@ -11,9 +11,9 @@ svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/l
 rm -rf package/luci-app-openclash/.svn
 
 ## 修改include/target.mk
-sed -i 's/iptables/iptables ip6tables odhcp6c odhcpd-ipv6only/g' target/linux/x86/Makefile
-sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-istorex/g' include/target.mk
+sed -i 's/luci/luci kmod-bnx2 kmod-forcedeth/g' include/target.mk
+sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-store/g' include/target.mk
 sed -i 's/luci-app-turboacc/luci-app-udpxy luci-app-upnp/g' include/target.mk
 
 ## 修改openwrt/target/linux/x86的Makefile文件
-sed -i 's/autocore-x86 automount/htop autocore-x86 ipv6helper/g' target/linux/x86/Makefile
+sed -i 's/automount/iptables ip6tables dnsmasq-full firewall htop ppp ppp-mod-pppoe/g' target/linux/x86/Makefile
