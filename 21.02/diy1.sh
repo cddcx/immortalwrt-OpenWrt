@@ -11,7 +11,7 @@ svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease pack
 #rm -rf package/luci-app-openclash/.svn
 
 ## 修改include/target.mk
-sed -i 's/luci/luci kmod-bnx2 kmod-forcedeth/g' include/target.mk
+sed -i 's/kmod-nf-nathelper/kmod-nf-nathelper kmod-bnx2 kmod-forcedeth/g' include/target.mk
 sed -i 's/luci-app-filetransfer/luci-app-openclash luci-app-store/g' include/target.mk
 sed -i 's/luci-app-turboacc/luci-app-udpxy luci-app-upnp/g' include/target.mk
 
