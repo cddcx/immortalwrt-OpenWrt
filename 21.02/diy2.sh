@@ -13,10 +13,10 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/M
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 
 ##把nas-packages-luci的zh-cn替换成zh_Hans
-sed -i 's/("QuickStart")/("首页")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
-sed -i 's/("NetworkGuide")/("向导")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
-sed -i 's/("RAID")/("磁盘阵列")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
-sed -i 's/("NetworkPort")/("网口配置")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
+#sed -i 's/("QuickStart")/("首页")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
+#sed -i 's/("NetworkGuide")/("向导")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
+#sed -i 's/("RAID")/("磁盘阵列")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
+#sed -i 's/("NetworkPort")/("网口配置")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
 #cp -af feeds/xiangfeidexiaohuo/linkease/nas-packages-luci/luci-app-quickstart/po/zh-cn package/nas-packages-luci/luci-app-quickstart/po/zh_Hans
 
 ## 删除软件
