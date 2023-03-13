@@ -37,12 +37,6 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 #sed -i '/uci-lib-base/d' include/target.mk
 #sed -i '/luci-lib-fs/d' include/target.mk
 #sed -i '/luci-lib-ipkg/d' include/target.mk
-sed -i "s/DEFAULT_PACKAGES:=/DEFAULT_PACKAGES:=luci-base luci-compat luci-lib-ipkg luci-lib-fs default-settings-chn luci \
-coremark wget-ssl curl htop nano zram-swap kmod-lib-zstd kmod-tcp-bbr bash openssh-sftp-server block-mount resolveip ds-lite swconfig /" include/target.mk
-sed -i "s/ipv6helper/odhcp6c \
-odhcpd-ipv6only/" include/target.mk
-sed -i "s/automount/autocore-x86 usbutils pciutils lm-sensors-detect fdisk lsblk \
-luci-app-firewall luci-app-opkg luci-app-ssr-plus luci-app-udpxy luci-app-upnp/" target/linux/x86/Makefile
 
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
