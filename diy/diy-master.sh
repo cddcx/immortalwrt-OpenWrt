@@ -35,6 +35,7 @@
 #git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 #rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
+sed -i 's/luci-app-cpufreq/iluci-app-openclash luci-app-store luci-app-udpxy luci-app-upnp/g' include/target.mk
 sed -i 's/ip6tables/ip6tables ipv6helper kmod-bnx2 kmod-forcedeth/g' include/target.mk
 sed -i 's/automount/aautocore-x86 luci' target/linux/x86/Makefile
 # luci-theme-argon改版主题
