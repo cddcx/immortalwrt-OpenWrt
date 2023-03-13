@@ -7,8 +7,8 @@ sed -i 's/root::0:0:99999:7:::/root:$1$xUooaZpA$6zs50xt4ac9sJXiYpycT3\/:19338:0:
 svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
 
 ## luci-app-openclash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
-rm -rf package/luci-app-openclash/.svn
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+#rm -rf package/luci-app-openclash/.svn
 
 ## 修改include/target.mk
 sed -i 's/luci/luci kmod-bnx2 kmod-forcedeth/g' include/target.mk
