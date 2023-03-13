@@ -37,7 +37,8 @@
 
 sed -i 's/luci-app-cpufreq/iluci-app-openclash luci-app-store luci-app-udpxy luci-app-upnp/g' include/target.mk
 sed -i 's/ip6tables/ip6tables ipv6helper kmod-bnx2 kmod-forcedeth/g' include/target.mk
-sed -i 's/automount/aautocore-x86 luci' target/linux/x86/Makefile
+sed -i 's/automount/aautocore-x86 luci' include/target.mk
+sed -i 's/grub2-bios-setup automount/grub2-bios-setup' target/linux/x86/Makefile
 # luci-theme-argon改版主题
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
