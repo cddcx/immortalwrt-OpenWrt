@@ -11,6 +11,7 @@
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 
 ##把nas-packages-luci的zh-cn替换成zh_Hans
 #sed -i 's/("QuickStart")/("首页")/g' package/linkease/luci-app-quickstart/luasrc/controller/quickstart.lua
