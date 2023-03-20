@@ -26,10 +26,10 @@
 #sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/linkease/iStore/luci-app-store/luasrc/controller/store.lua
 
 # 软件中心istore
-#svn co https://github.com/linkease/istore/trunk/luci package/istore
-#svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
-#rm -rf package/istore/.svn
-#sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
+svn co https://github.com/linkease/istore/trunk/luci package/istore
+svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
+rm -rf package/istore/.svn
+sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
 
 # luci-theme-opentopd主题
 #git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
