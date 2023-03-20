@@ -40,5 +40,5 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf feeds/luci/themes/luci-theme-argon*
+#rm -rf feeds/luci/themes/luci-theme-argon*
 
