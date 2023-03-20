@@ -37,7 +37,7 @@
 
 sed -i 's/ip6tables/ip6tables ipv6helper kmod-bnx2 kmod-forcedeth/g' include/target.mk
 
-sed -i 's/automount/autocore-x86 block-mount default-settings-chn luci kmod-nf-nathelper kmod-nf-nathelper-extra luci-light luci-compat luci-lib-base luci-lib-fs luci-lib-ipkg luci-app-openclash luci-app-store luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
+sed -i 's/automount/autocore-x86 block-mount default-settings-chn luci kmod-nf-nathelper kmod-nf-nathelper-extra luci-compat luci-lib-base luci-lib-fs luci-lib-ipkg luci-app-openclash luci-app-store luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
 # luci-theme-argon改版主题
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
