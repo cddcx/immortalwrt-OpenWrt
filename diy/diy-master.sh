@@ -35,9 +35,9 @@ sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/l
 #git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 #rm -rf package/luci-theme-opentopd/README* package/luci-theme-opentopd/doc/
 
-sed -i 's/ip6tables/ip6tables ipv6helper/g' include/target.mk
+sed -i 's/ip6tables/iptables ip6tables ipv6helper/g' include/target.mk
 
-sed -i 's/automount/autocore-x86 default-settings-chn luci luci-app-openclash luci-app-store luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
+sed -i 's/automount/autocore-x86 default-settings-chn luci luci-compat ip6tables-mod-nat iptables-mod-extra iptables-mod-tproxy luci-app-openclash luci-app-store luci-app-udpxy luci-app-upnp/g' target/linux/x86/Makefile
 # luci-theme-argon改版主题
 #git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
