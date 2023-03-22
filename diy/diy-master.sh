@@ -31,8 +31,8 @@ svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-stor
 rm -rf package/istore/.svn
 sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
 
-sed -i 's/autocore/autocore-x86 luci/g' include/target.mk
-sed -i 's/luci-app-cpufreq/luci-app-udpxy/g' include/target.mk
+#sed -i 's/autocore/autocore-x86 luci/g' include/target.mk
+sed -i 's/luci-app-cpufreq/luci luci-app-udpxy/g' include/target.mk
 sed -i 's/luci-app-opkg/luci-app-opkg luci-app-upnp/g' include/target.mk
 
 sed -i 's/automount/luci-app-openclash luci-app-store/g' target/linux/x86/Makefile
