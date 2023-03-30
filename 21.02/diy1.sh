@@ -23,3 +23,7 @@ sed -i 's/automount/luci-app-openclash luci-app-store/g' target/linux/x86/Makefi
 
 ## 修改openwrt/target/linux/x86的Makefile文件
 #sed -i 's/automount/iptables ip6tables dnsmasq-full firewall htop ppp ppp-mod-pppoe/g' target/linux/x86/Makefile
+
+# ikoolproxy去广告插件
+git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+rm -rf package/luci-app-ikoolproxy/README*
