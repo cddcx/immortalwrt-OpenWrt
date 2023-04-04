@@ -33,6 +33,8 @@ rm -rf feeds/packages/net/v2raya
 rm -rf feeds/packages/net/v2ray-core
 rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/net/v2ray-plugin
+rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/xray-plugin
 #rm -rf feeds/luci/applications/luci-app-openclash
 #rm -rf feeds/packages/utils/containerd
 #rm -rf feeds/packages/utils/coremark
