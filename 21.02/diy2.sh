@@ -27,6 +27,12 @@ rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/packages/net/smartdns
+rm -rf feeds\luci\applications\luci-app-v2raya
+rm -rf feeds\luci\applications\luci-app-v2ray-server
+rm -rf feeds/packages/net/v2raya
+rm -rf feeds/packages/net/v2ray-core
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/v2ray-plugin
 #rm -rf feeds/luci/applications/luci-app-openclash
 #rm -rf feeds/packages/utils/containerd
 #rm -rf feeds/packages/utils/coremark
