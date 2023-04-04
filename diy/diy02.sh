@@ -41,4 +41,12 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 # 整理
 #rm -rf feeds/luci/applications/luci-app-passwall
 #rm -rf feeds/luci/themes/luci-theme-argon*
+rm -rf feeds/luci/applications/luci-app-v2raya
+rm -rf feeds/luci/applications/luci-app-v2ray-server
+rm -rf feeds/packages/net/v2raya
+rm -rf feeds/packages/net/v2ray-core
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf feeds/packages/net/v2ray-plugin
+rm -rf feeds/packages/net/xray-core
+rm -rf feeds/packages/net/xray-plugin
 
