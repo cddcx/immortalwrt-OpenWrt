@@ -26,8 +26,8 @@
 #sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/linkease/iStore/luci-app-store/luasrc/controller/store.lua
 
 # ikoolproxy去广告插件
-git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
-rm -rf package/luci-app-ikoolproxy/README*
+#git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+#rm -rf package/luci-app-ikoolproxy/README*
 
 ## luci-app-xray
 git clone https://github.com/yichya/luci-app-xray.git package/luci-app-xray
