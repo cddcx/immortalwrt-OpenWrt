@@ -12,6 +12,11 @@ sed -i 's/luci-app-filetransfer/luci-app-udpxy/g' include/target.mk
 sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 sed -i 's/automount/luci-app-openclash luci-app-store/g' target/linux/x86/Makefile
 
+## luci-app-xray
+svn co https://github.com/yichya/luci-app-xray package/extra/luci-app-xray
+svn co https://github.com/yichya/openwrt-xray package/extra/openwrt-xray
+svn co https://github.com/xiechangan123/luci-i18n-xray-zh-cn package/extra/luci-i18n-xray-zh-cn
+
 ## luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 #rm -rf package/luci-app-openclash/.svn
