@@ -15,7 +15,7 @@ sed -i 's/automount/luci-app-openclash luci-app-store/g' target/linux/x86/Makefi
 ## luci-app-xray
 git clone https://github.com/yichya/luci-app-xray.git package/luci-app-xray
 git clone https://github.com/yichya/openwrt-xray.git package/openwrt-xray
-git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+git clone -b old https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 ## luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
