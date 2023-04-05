@@ -55,7 +55,12 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-        
+
+    - name: 运行scripts下的补丁
+      run: |
+        [ -e scripts ] && bash scripts/builder-patch.sh
+        [ -e scripts ] && bash scripts/clash.sh
+
     - name: 加载files和.config
       run: |        
         [ -e files ] && mv files openwrt/files
@@ -66,11 +71,6 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-
-    - name: 运行scripts下的补丁
-      run: |
-        [ -e scripts ] && bash scripts/builder-patch.sh
-        [ -e scripts ] && bash scripts/clash.sh
 
     - name: 下载依赖
       working-directory: ./openwrt
