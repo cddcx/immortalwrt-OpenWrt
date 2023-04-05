@@ -33,6 +33,7 @@
 git clone https://github.com/yichya/luci-app-xray.git package/luci-app-xray
 git clone https://github.com/yichya/openwrt-xray.git package/openwrt-xray
 git clone https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+sed -i 's/luci-app-xray-fw4/luci-app-xray/g' package/luci-i18n-xray-zh-cn/Makefile
 
 # 软件中心istore
 svn co https://github.com/linkease/istore/trunk/luci package/istore
