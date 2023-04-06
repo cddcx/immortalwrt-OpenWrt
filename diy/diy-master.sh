@@ -36,12 +36,12 @@
 #sed -i 's/luci-app-xray-fw4/luci-app-xray/g' package/luci-i18n-xray-zh-cn/Makefile
 
 # 软件中心istore
-svn co https://github.com/linkease/istore/trunk/luci package/istore
-svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
-rm -rf package/istore/.svn
-sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
+#svn co https://github.com/linkease/istore/trunk/luci package/istore
+#svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
+#rm -rf package/istore/.svn
+#sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
 
-sed -i 's/automount/autocore-x86 luci default-settings-chn block-mount kmod-nf-nathelper kmod-nf-nathelper-extra luci-light luci-app-opkg luci-compat luci-lib-base luci-lib-fs luci-lib-ipkg luci-app-udpxy luci-app-upnp luci-app-openclash luci-app-store/g' target/linux/x86/Makefile
+sed -i 's/automount/automount autocore-x86 luci default-settings-chn block-mount kmod-nf-nathelper kmod-nf-nathelper-extra luci-light luci-app-opkg luci-compat luci-lib-base luci-lib-fs luci-lib-ipkg luci-app-udpxy luci-app-upnp luci-app-openclash/g' target/linux/x86/Makefile
 
 # luci-theme-opentopd主题
 #git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
