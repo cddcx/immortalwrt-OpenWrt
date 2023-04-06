@@ -6,7 +6,7 @@ echo "Current Path: $PWD"
 # 恢复OpenClash备份
 mkdir -p files/etc/openclash
 cp -rf scripts/Backup-OpenClash*.tar.gz files/etc/openclash
-#chmod +x files/etc/openclas
+#chmod +x files/etc/openclash
 cd files/etc/openclash
 tar -zxvf Backup-OpenClash*.tar.gz
 rm -rf Backup-OpenClash*.tar.gz
