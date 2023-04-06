@@ -4,8 +4,9 @@ echo "Start Clash Core Download !"
 echo "Current Path: $PWD"
 
 mkdir -p files/etc/openclas
-cp -rf scripts/Backup-OpenClash.tar.gz files/etc/openclas
-cd files/etc/openclash
+cp -rf scripts/Backup-OpenClash*.tar.gz files/etc/openclas
+cd files/etc/openclash || (echo "Clash core path does not exist! " && exit)
+mv Backup-OpenClash*.tar.gz Backup-OpenClash.tar.gz
 tar -zxvf Backup-OpenClash.tar.gz
 rm -rf Backup-OpenClash.tar.gz
 
