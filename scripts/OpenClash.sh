@@ -10,8 +10,8 @@ cd files/etc/openclas
 tar -zxvf Backup-OpenClash*.tar.gz
 rm -rf Backup-OpenClash*.tar.gz
 
-mkdir -p files/etc/openclash/core
-cd files/etc/openclash/core || (echo "Clash core path does not exist! " && exit)
+mkdir -p core
+cd core || (echo "Clash core path does not exist! " && exit)
 wget https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz
 tar -zxvf clash-linux-amd64.tar.gz
 mv clash clash_meta
