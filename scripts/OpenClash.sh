@@ -4,10 +4,10 @@ echo "Start Clash Core Download !"
 echo "Current Path: $PWD"
 
 # 恢复OpenClash备份
-mkdir -p files/etc/openclas
-cp -rf scripts/Backup-OpenClash*.tar.gz files/etc/openclas
+mkdir -p files/etc/openclash
+cp -rf scripts/Backup-OpenClash*.tar.gz files/etc/openclash
 #chmod +x files/etc/openclas
-cd files/etc/openclas
+cd files/etc/openclash
 tar -zxvf Backup-OpenClash*.tar.gz
 rm -rf Backup-OpenClash*.tar.gz
 # 下载OpenClash核心
