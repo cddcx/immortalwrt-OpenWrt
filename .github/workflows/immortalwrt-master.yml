@@ -64,7 +64,7 @@ jobs:
       run: |
         chmod +x scripts
         [ -e scripts ] && bash $GITHUB_WORKSPACE/scripts/builder-patch.sh
-        [ -e scripts ] && bash $GITHUB_WORKSPACE/scripts/clash.sh
+        [ -e scripts ] && bash $GITHUB_WORKSPACE/scripts/OpenClash.sh
 
     - name: 加载files
       run: |        
