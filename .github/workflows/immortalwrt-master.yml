@@ -58,8 +58,9 @@ jobs:
 
     - name: 运行scripts下的补丁
       run: |
-        [ -e scripts ] && bash scripts/builder-patch.sh
-        [ -e scripts ] && bash scripts/clash.sh
+        chmod +x scripts
+        [ -e scripts ] && bash $GITHUB_WORKSPACE/scripts/builder-patch.sh
+        [ -e scripts ] && bash $GITHUB_WORKSPACE/scripts/clash.sh
 
     - name: 加载files和.config
       run: |        
