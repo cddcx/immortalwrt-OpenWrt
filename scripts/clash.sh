@@ -3,6 +3,12 @@
 echo "Start Clash Core Download !"
 echo "Current Path: $PWD"
 
+mkdir -p files/etc/openclas
+cp -rf scripts/Backup-OpenClash.tar.gz files/etc/openclas
+cd files/etc/openclash
+tar -zxvf Backup-OpenClash.tar.gz
+rm -rf Backup-OpenClash.tar.gz
+
 mkdir -p files/etc/openclash/core
 cd files/etc/openclash/core || (echo "Clash core path does not exist! " && exit)
 wget https://raw.githubusercontent.com/vernesong/OpenClash/core/master/meta/clash-linux-amd64.tar.gz
