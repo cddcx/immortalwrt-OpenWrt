@@ -13,9 +13,9 @@ sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 sed -i 's/automount/luci-app-openclash luci-app-store/g' target/linux/x86/Makefile
 
 ## luci-app-xray
-git clone https://github.com/yichya/luci-app-xray.git package/luci-app-xray
-git clone https://github.com/yichya/openwrt-xray.git package/openwrt-xray
-git clone -b old https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
+#git clone https://github.com/yichya/luci-app-xray.git package/luci-app-xray
+#git clone https://github.com/yichya/openwrt-xray.git package/openwrt-xray
+#git clone -b old https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git package/luci-i18n-xray-zh-cn
 
 ## luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
@@ -30,5 +30,5 @@ git clone -b old https://github.com/xiechangan123/luci-i18n-xray-zh-cn.git packa
 #sed -i 's/automount/iptables ip6tables dnsmasq-full firewall htop ppp ppp-mod-pppoe/g' target/linux/x86/Makefile
 
 # ikoolproxy去广告插件
-git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
-rm -rf package/luci-app-ikoolproxy/README*
+#git clone https://github.com/iwrt/luci-app-ikoolproxy.git package/luci-app-ikoolproxy
+#rm -rf package/luci-app-ikoolproxy/README*
