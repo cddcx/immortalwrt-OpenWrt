@@ -62,8 +62,8 @@ jobs:
     - name: 运行scripts下的补丁
       working-directory: ./openwrt
       run: |
-        [ -e scripts/builder-patch.sh ] && bash $GITHUB_WORKSPACE/scripts/builder-patch.sh
-        [ -e scripts/OpenClash.sh ] && bash $GITHUB_WORKSPACE/scripts/OpenClash.sh
+        [ -e scripts/builder-patch.sh ] && bash scripts/builder-patch.sh
+        [ -e scripts/OpenClash.sh ] && bash scripts/OpenClash.sh
         [ -e scripts/zsh.sh ] && bash scripts/zsh.sh
         
     - name: 加载files
