@@ -13,8 +13,8 @@ sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 sed -i 's/automount/luci-app-openclash luci-app-vssr luci-app-store/g' target/linux/x86/Makefile
 
 ## luci-app-vssr依赖
-svn co https://github.com/kenzok8/small/trunk/xray-core package/xray-core
-svn co https://github.com/kenzok8/small/trunk/xray-plugin package/xray-plugin
+#svn co https://github.com/kenzok8/small/trunk/xray-core package/xray-core
+#svn co https://github.com/kenzok8/small/trunk/xray-plugin package/xray-plugin
 
 ## luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
