@@ -4,7 +4,7 @@
 sed -i 's/root::0:0:99999:7:::/root:$1$xUooaZpA$6zs50xt4ac9sJXiYpycT3\/:19338:0:99999:7:::/g' package/base-files/files/etc/shadow
 
 ## 酷友社开发的Openwrt插件：DDNSTO远程穿透、易有云存储端、iStore、QuickStart便捷首页
-#svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
+svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
 
 sed -i 's/iptables/iptables ip6tables kmod-ipt-offload odhcp6c odhcpd-ipv6only/g' include/target.mk
 sed -i 's/ipv6helper/ipv6helper block-mount default-settings-chn kmod-ipt-raw kmod-nf-nathelper kmod-nf-nathelper-extra luci luci-compat luci-lib-base luci-lib-fs luci-lib-ipkg/g' include/target.mk
