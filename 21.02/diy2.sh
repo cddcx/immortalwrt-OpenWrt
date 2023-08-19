@@ -25,8 +25,8 @@ rm -rf feeds/luci/applications/luci-app-adguardhome
 rm -rf feeds/packages/net/adguardhome
 rm -rf feeds/luci/applications/luci-app-mosdns
 rm -rf feeds/packages/net/mosdns
-rm -rf feeds/luci/applications/luci-app-openclash
-rm -rf feeds/packages/net/openclash
+#rm -rf feeds/luci/applications/luci-app-openclash
+#rm -rf feeds/packages/net/openclash
 rm -rf feeds/luci/applications/luci-app-smartdns
 rm -rf feeds/packages/net/smartdns
 #rm -rf feeds/luci/applications/luci-app-v2raya
