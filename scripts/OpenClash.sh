@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Start Clash Core Download !"
-echo "Current Path: $PWD"
+#echo "Start Clash Core Download !"
+#echo "Current Path: $PWD"
 
 mkdir -p files/etc/openclash/core
 cd files/etc/openclash/core
