@@ -14,10 +14,10 @@ sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci/luci-app-st
 
 sed -i 's/iptables/iptables ip6tables kmod-ipt-offload odhcp6c odhcpd-ipv6only/g' include/target.mk
 sed -i 's/ipv6helper/ipv6helper block-mount default-settings-chn kmod-ipt-raw kmod-nf-nathelper kmod-nf-nathelper-extra luci luci-compat luci-lib-base luci-lib-fs luci-lib-ipkg/g' include/target.mk
-sed -i 's/luci-app-filetransfer/luci-app-udpxy/g' include/target.mk
+sed -i 's/luci-app-filetransfer/luci-app-Store luci-app-udpxy/g' include/target.mk
 sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 #sed -i 's/automount/luci-app-Store luci-app-vssr/g' target/linux/x86/Makefile
-sed -i 's/automount/luci-app-Store luci-app-openclash/g' target/linux/x86/Makefile
+sed -i 's/automount/luci-app-openclash/g' target/linux/x86/Makefile
 
 ## luci-app-vssr依赖
 #svn co https://github.com/kenzok8/small/trunk/xray-core package/xray-core
