@@ -21,7 +21,6 @@ sed -i 's/automount/luci-app-passwall2 luci-app-openclash/g' target/linux/x86/Ma
 
 # luci-app-passwall2
 svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
-# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 ## luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
