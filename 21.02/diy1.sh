@@ -20,7 +20,7 @@ sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 sed -i 's/automount/luci-app-openclash/g' target/linux/x86/Makefile
 
 # luci-app-passwall2
-svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/passwall2
+svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
 # git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 ## luci-app-openclash
