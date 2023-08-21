@@ -19,9 +19,9 @@ sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 #sed -i 's/automount/luci-app-Store luci-app-vssr/g' target/linux/x86/Makefile
 sed -i 's/automount/luci-app-openclash/g' target/linux/x86/Makefile
 
-## luci-app-vssr依赖
-#svn co https://github.com/kenzok8/small/trunk/xray-core package/xray-core
-#svn co https://github.com/kenzok8/small/trunk/xray-plugin package/xray-plugin
+# luci-app-passwall2
+#svn co https://github.com/xiaorouji/openwrt-passwall/tree/luci/luci-app-passwall openwrt-passwall/luci-app-passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 
 ## luci-app-openclash
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
