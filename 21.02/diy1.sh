@@ -17,7 +17,7 @@ sed -i 's/ipv6helper/ipv6helper block-mount default-settings-chn kmod-ipt-raw km
 sed -i 's/luci-app-filetransfer/luci-app-udpxy/g' include/target.mk
 sed -i 's/luci-app-turboacc/luci-app-upnp/g' include/target.mk
 #sed -i 's/automount/luci-app-Store luci-app-vssr/g' target/linux/x86/Makefile
-sed -i 's/automount/luci-app-openclash/g' target/linux/x86/Makefile
+sed -i 's/automount/luci-app-passwall2 luci-app-openclash/g' target/linux/x86/Makefile
 
 # luci-app-passwall2
 svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
