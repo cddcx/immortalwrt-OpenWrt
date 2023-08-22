@@ -62,9 +62,8 @@ jobs:
 
     - name: 运行scripts下的补丁
       run: |
-        chmod +x scripts
         [ -e scripts/builder-patch.sh ] && bash scripts/builder-patch.sh
-        [ -e scripts/OpenClash.sh ] && scripts/OpenClash.sh
+        [ -e scripts/OpenClash.sh ] && bash scripts/OpenClash.sh
 
     - name: 加载files
       run: |        
