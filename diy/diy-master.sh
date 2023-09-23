@@ -41,7 +41,8 @@
 #rm -rf package/istore/.svn
 #sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
 
-sed -i 's/automount/automount autocore-x86 luci default-settings-chn luci-app-udpxy luci-app-upnp luci-app-openclash/g' target/linux/x86/Makefile
+# 修改target/linux/x86/Makefile
+sed -i 's/automount/autocore default-settings-chn luci luci-compat luci-app-udpxy luci-app-upnp luci-app-openclash/g' target/linux/x86/Makefile
 
 # luci-app-passwall2
 #svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
