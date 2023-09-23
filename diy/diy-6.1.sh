@@ -19,6 +19,7 @@
 
 # 修改内核
 sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
+sed -i 's/automount/autocore-x86 default-settings-chn luci luci-app-udpxy luci-app-upnp luci-app-openclash/g' target/linux/x86/Makefile
 
 #酷友社开发的Openwrt插件：DDNSTO远程穿透、易有云存储端、iStore、QuickStart便捷首页
 #svn co https://github.com/xiangfeidexiaohuo/openwrt-packages/trunk/linkease package/linkease
@@ -40,8 +41,6 @@ sed -i 's/PATCHVER:=5.15/PATCHVER:=6.1/g' target/linux/x86/Makefile
 #svn co https://github.com/linkease/istore-ui/trunk/app-store-ui package/app-store-ui
 #rm -rf package/istore/.svn
 #sed -i 's/("iStore"), 31/("应用商店"), 61/g' package/istore/luci-app-store/luasrc/controller/store.lua
-
-sed -i 's/autocore/autocore-x86 luci luci-app-udpxy luci-app-upnp luci-app-openclash/g' target/linux/x86/Makefile
 
 # luci-app-passwall2
 #svn co https://github.com/xiaorouji/openwrt-passwall2/trunk/luci-app-passwall2 package/luci-app-passwall2
