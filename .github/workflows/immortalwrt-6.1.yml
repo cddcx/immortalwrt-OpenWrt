@@ -66,7 +66,7 @@ jobs:
     - name: 运行scripts下的补丁
       run: |
         [ -e scripts/builder-patch.sh ] && bash scripts/builder-patch.sh
-        [ -e scripts/OpenClash.sh ] && bash scripts/OpenClash.sh
+        #[ -e scripts/OpenClash.sh ] && bash scripts/OpenClash.sh
         [ -e scripts/preset-clash-core.sh ] && bash scripts/preset-clash-core.sh
 
     - name: 加载files
