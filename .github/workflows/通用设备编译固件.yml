@@ -24,15 +24,14 @@ env:
   CONFIG_FILE: config/${{ inputs.source_branch }}/config
   DIY_P1_SH: config/${{ inputs.source_branch }}/diy-part1.sh
   DIY_P2_SH: config/${{ inputs.source_branch }}/diy-part2.sh
-  UPLOAD_BIN_DIR: true
+  UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
-  UPLOAD_RELEASE: true
+  UPLOAD_RELEASE: false
   TZ: Asia/Shanghai
 
 jobs:
   build:
     runs-on: ubuntu-22.04
-    if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:
       - name: 检查项目分支
@@ -98,7 +97,7 @@ jobs:
           cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P1_SH}
 
-      - name: 下载feeds
+      - name: 更新feeds
         run: cd openwrt/ && ./scripts/feeds update -a
 
       - name: 安装feeds
@@ -154,5 +153,5 @@ jobs:
         uses: actions/upload-artifact@main
         if: steps.organize.outputs.status == 'success' && !cancelled()
         with:
-          name: immortalwrt${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          name: ${TAGS_NAME}${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: ${{ env.FIRMWARE }}
