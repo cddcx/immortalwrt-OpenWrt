@@ -38,10 +38,10 @@ jobs:
       - name: 检查项目分支
         uses: actions/checkout@main
 
-      - name: Initialization environment
+      - name: 安装编译环境
         id: init
         env:
-          DEBIAN_FRONTEND: 安装编译环境
+          DEBIAN_FRONTEND: noninteractive
         run: |
           docker rmi `docker images -q`
           [[ -n "${AGENT_TOOLSDIRECTORY}" ]] && sudo rm -rf "${AGENT_TOOLSDIRECTORY}"
