@@ -58,7 +58,7 @@ jobs:
           sudo timedatectl set-timezone "${TZ}"
           echo "status=success" >> ${GITHUB_OUTPUT}
 
-      - name: 下载固件源码 [ ${{ inputs.source_branch }} ]
+      - name: 下载固件源码 [ ${{ inputs.source }} ]
         id: codes
         working-directory: /workdir
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
