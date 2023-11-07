@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       source_branch:
-        description: "Select the source branch"
+        description: "手动触发一次编译"
         required: false
         default: "immortalwrt-master"
         type: choice
@@ -35,13 +35,13 @@ jobs:
     if: ${{ github.event.repository.owner.id }} == ${{ github.event.sender.id }}
 
     steps:
-      - name: Checkout
+      - name: 检查项目分支
         uses: actions/checkout@main
 
       - name: Initialization environment
         id: init
         env:
-          DEBIAN_FRONTEND: noninteractive
+          DEBIAN_FRONTEND: 安装编译环境
         run: |
           docker rmi `docker images -q`
           [[ -n "${AGENT_TOOLSDIRECTORY}" ]] && sudo rm -rf "${AGENT_TOOLSDIRECTORY}"
@@ -58,7 +58,7 @@ jobs:
           sudo timedatectl set-timezone "${TZ}"
           echo "status=success" >> ${GITHUB_OUTPUT}
 
-      - name: Clone source code [ ${{ inputs.source_branch }} ]
+      - name: 下载固件源码 [ ${{ inputs.source_branch }} ]
         id: codes
         working-directory: /workdir
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
@@ -91,20 +91,20 @@ jobs:
           df -hT ${PWD}
           echo "status=success" >> ${GITHUB_OUTPUT}
 
-      - name: Load custom feeds
+      - name: 加载feeds和diy1
         run: |
           [[ -f "${FEEDS_CONF}" ]] && cp -f ${FEEDS_CONF} openwrt/feeds.conf.default
           chmod +x ${DIY_P1_SH}
           cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P1_SH}
 
-      - name: Update feeds
+      - name: 下载feeds
         run: cd openwrt/ && ./scripts/feeds update -a
 
-      - name: Install feeds
+      - name: 安装feeds
         run: cd openwrt/ && ./scripts/feeds install -a
 
-      - name: Load custom configuration
+      - name: 加载files与.config diy2
         run: |
           [[ -d "files" ]] && mv -f files openwrt/files
           [[ -e "${CONFIG_FILE}" ]] && cp -f ${CONFIG_FILE} openwrt/.config
@@ -112,7 +112,7 @@ jobs:
           cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P2_SH}
 
-      - name: Download package
+      - name: 下载依赖
         id: package
         run: |
           cd openwrt/
@@ -121,7 +121,7 @@ jobs:
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
 
-      - name: Compile the OpenWrt
+      - name: 编译固件
         id: compile
         run: |
           cd openwrt/
@@ -130,40 +130,30 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
 
-      - name: Check space usage
+      - name: 检查磁盘空间
         if: (!cancelled())
         run: df -hT
 
-      - name: Upload bin directory
-        uses: actions/upload-artifact@main
-        if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
-        with:
-          name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-          path: openwrt/bin
-
-      - name: Organize files
+      - name: 整理固件包
         id: organize
         if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
         run: |
           cd openwrt/bin/targets/*/*
+          # 整理固件包时候,删除您不想要的固件或者文件,让它不需要上传到Actions空间
           rm -rf packages
+          rm -rf feeds.buildinfo
+          rm -rf version.buildinfo
+          rm -rf *kernel.bin
+          rm -rf profiles.json
+          rm -rf *rootfs.img
+          rm -rf *.manifest
+          rm -rf sha256sums
           echo "FIRMWARE=$PWD" >> $GITHUB_ENV
           echo "::set-output name=status::success"
 
-      - name: Upload firmware directory
+      - name: 上传固件到github
         uses: actions/upload-artifact@main
         if: steps.organize.outputs.status == 'success' && !cancelled()
         with:
-          name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          name: immortalwrt${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: ${{ env.FIRMWARE }}
-
-      - name: Generate release tag
-        id: tag
-        if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-        run: |
-          echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
-          touch release.txt
-          [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
-          [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-          echo "::set-output name=status::success"
-
