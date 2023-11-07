@@ -58,7 +58,7 @@ jobs:
           sudo timedatectl set-timezone "${TZ}"
           echo "status=success" >> ${GITHUB_OUTPUT}
 
-      - name: 下载固件源码 [ ${{ inputs.source }} ]
+      - name: 下载固件源码 [ ${{ inputs.source_branch }} ]
         id: codes
         working-directory: /workdir
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
@@ -155,5 +155,5 @@ jobs:
         uses: actions/upload-artifact@main
         if: steps.organize.outputs.status == 'success' && !cancelled()
         with:
-          name: immortalwrt${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
+          name: ${{ inputs.source }}${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: ${{ env.FIRMWARE }}
