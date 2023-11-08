@@ -36,4 +36,4 @@
 ## 鸣谢
 > [`Tianling Shen`](https://github.com/immortalwrt/immortalwrt)
 > [`P3TERX`](https://github.com/P3TERX/Actions-OpenWrt)
-> [`感谢各位大佬！`](#/README.md)
+> [`xinlingduyu `]([#/README.md](https://github.com/xinlingduyu/build-openwrt/tree/main)https://github.com/xinlingduyu/build-openwrt/tree/main)
