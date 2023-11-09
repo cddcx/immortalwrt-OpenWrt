@@ -148,11 +148,9 @@ jobs:
           rm -rf *.manifest
           rm -rf sha256sums
           echo "FIRMWARE=$PWD" >> $GITHUB_ENV
-          echo "::set-output name=status::success"
 
       - name: 上传固件到github
         uses: actions/upload-artifact@main
-        if: steps.organize.outputs.status == 'success' && !cancelled()
         with:
           name: OpenWrt${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
           path: ${{ env.FIRMWARE }}
