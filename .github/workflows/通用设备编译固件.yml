@@ -106,7 +106,7 @@ jobs:
           cd openwrt/
           ${GITHUB_WORKSPACE}/${DIY_P1_SH}
           ${GITHUB_WORKSPACE}/${DIY_P2_SH}
-          $GITHUB_WORKSPACE/scripts/preset-clash-core.sh
+          $GITHUB_WORKSPACE/scripts/OpenClash-core.sh
 
       - name: 下载依赖
         id: package
