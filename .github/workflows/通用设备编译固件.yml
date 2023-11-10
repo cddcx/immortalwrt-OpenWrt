@@ -119,7 +119,7 @@ jobs:
       
       - name: 生成变量
         run: |
-          cd $OPENWRT_PATH
+          cd openwrt/
           SOURCE_REPO="$(echo $SOURCE_URL | awk -F '/' '{print $(NF)}')"
           echo "SOURCE_REPO=$SOURCE_REPO" >> $GITHUB_ENV
           DEVICE_TARGET=$(cat .config | grep CONFIG_TARGET_BOARD | awk -F '"' '{print $2}')
@@ -129,7 +129,7 @@ jobs:
 
       - name: 编译包
         run: |
-          cd $openwrt/
+          cd openwrt/
           echo -e "$(nproc) thread compile"
           make tools/compile -j$(nproc) || make tools/compile -j1 V=s
           make toolchain/compile -j$(nproc) || make toolchain/compile -j1 V=s
@@ -141,7 +141,7 @@ jobs:
       - name: 生成固件
         id: generate
         run: |
-          cd $OPENWRT_PATH
+          cd openwrt/
           make package/install -j$(nproc) || make package/install -j1 V=s
           make target/install -j$(nproc) || make target/install -j1 V=s
           echo "status=success" >> $GITHUB_OUTPUT
