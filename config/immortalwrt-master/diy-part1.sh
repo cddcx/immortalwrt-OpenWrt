@@ -19,3 +19,6 @@ echo "src-git passwall2 https://github.com/xiaorouji/openwrt-passwall2.git;main"
 # luci-theme-kucat
 #git clone -b js https://github.com/sirpdboy/luci-theme-kucat.git package/luci-theme-kucat
 #sed -i '/set luci.main.mediaurlbase*/d' package/luci-theme-kucat/root/etc/uci-defaults/30_luci-kucat
+
+./scripts/feeds update -a
+./scripts/feeds install -a
