@@ -17,7 +17,9 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 #
 
 svn co https://github.com/kiddin9/OpenWrt_x86-r2s-r4s-r5s-N1/trunk/devices/common/patches devices/common/patches
+rm -rf devices/common/patches/.svn
 svn co https://github.com/kiddin9/OpenWrt_x86-r2s-r4s-r5s-N1/trunk/devices/x86_64/patches devices/x86_64/patches
+rm -rf devices/x86_64/patche/.svn
 
 (
 find "devices/common/patches" -type f ! -name 'china_mirrors.patch' -name '*.patch' ! -name '*.revert.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -B --merge -p1 -E --forward"
