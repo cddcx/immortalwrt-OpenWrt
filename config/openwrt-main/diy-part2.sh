@@ -16,18 +16,18 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-l
 # ------------------------------- Other started -------------------------------
 #
 
-# coolsnowwolf default software package replaced with Lienol related software package
-# rm -rf feeds/packages/utils/{containerd,libnetwork,runc,tini}
-# svn co https://github.com/Lienol/openwrt-packages/trunk/utils/{containerd,libnetwork,runc,tini} feeds/packages/utils
+svn co https://github.com/kiddin9/OpenWrt_x86-r2s-r4s-r5s-N1/trunk/devices/common/patches devices/common/patches
+svn co https://github.com/kiddin9/OpenWrt_x86-r2s-r4s-r5s-N1/trunk/devices/x86_64/patches devices/x86_64/patches
 
-# Add third-party software packages (The entire repository)
-# git clone https://github.com/libremesh/lime-packages.git package/lime-packages
-# Add third-party software packages (Specify the package)
-# svn co https://github.com/libremesh/lime-packages/trunk/packages/{shared-state-pirania,pirania-app,pirania} package/lime-packages/packages
-# Add to compile options (Add related dependencies according to the requirements of the third-party software package Makefile)
-# sed -i "/DEFAULT_PACKAGES/ s/$/ pirania-app pirania ip6tables-mod-nat ipset shared-state-pirania uhttpd-mod-lua/" target/linux/armvirt/Makefile
-
-# Apply patch
-# git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
+(
+find "devices/common/patches" -type f ! -name 'china_mirrors.patch' -name '*.patch' ! -name '*.revert.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -B --merge -p1 -E --forward"
+if [ -n "$(ls -A devices/x86_64/patches 2>/dev/null)" ]; then
+      if [ -n "$(ls -A devices/x86_64/*.bin.patch 2>/dev/null)" ]; then
+              git apply devices/x86_64/patches/*.bin.patch
+      fi
+      find "devices/x86_64/patches" -maxdepth 1 -type f -name '*.patch' ! -name '*.revert.patch' ! -name '*.bin.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -B --merge -p1 -E --forward"
+      find "devices/x86_64/patches" -maxdepth 1 -type f -name '*.revert.patch' -print0 | sort -z | xargs -I % -t -0 -n 1 sh -c "cat '%'  | patch -d './' -R -B --merge -p1 -E --forward"
+fi
+) &
 #
 # ------------------------------- Other ends -------------------------------
