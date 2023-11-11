@@ -14,7 +14,8 @@ sed -i 's/luci-app-attendedsysupgrade/luci-theme-argon/g' feeds/luci/collections
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-nginx/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-ssl-nginx/Makefile
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
-## 删除软件s
+
+## 删除软件
 rm -rf feeds/luci/applications/luci-app-passwall
 
 sed -i 's,kmod-r8169,kmod-r8168,g' target/linux/x86/image/64.mk
