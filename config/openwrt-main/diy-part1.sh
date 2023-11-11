@@ -40,8 +40,5 @@ sed -i 's/grub2-bios-setup/grub2-bios-setup autocore default-settings ipset luci
 # luci-theme-argon改版主题
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
 
-# Add luci-app-amlogic
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
-
 ./scripts/feeds update -a
 ./scripts/feeds install -a
