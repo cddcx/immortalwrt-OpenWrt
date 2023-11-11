@@ -16,7 +16,7 @@ sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-s
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci-light/Makefile
 
 ## 删除软件
-rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/small/luci-app-passwall
 
 sed -i 's,kmod-r8169,kmod-r8168,g' target/linux/x86/image/64.mk
 sed -i 's/256/1024/g' target/linux/x86/image/Makefile
