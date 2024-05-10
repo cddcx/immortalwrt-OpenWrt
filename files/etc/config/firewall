@@ -122,10 +122,6 @@ config rule
 	option proto 'udp'
 	option target 'ACCEPT'
 
-config include 'openclash'
-	option type 'script'
-	option path '/var/etc/openclash.include'
-
 config zone
 	option name 'IPTV'
 	option input 'ACCEPT'
